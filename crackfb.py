@@ -284,11 +284,11 @@ def crack_indo():
 		keluar()
 	os.system('clear')
 	print logo
-	print ("\033[0;97m╔═══════════════════════════════════════════════════════════════╗")
+	print ("\033[0;94m╔═══════════════════════════════════════════════════════════════╗")
 	print ('\033[0;97m   1.\033[0;97m Crack Dari Daftar Teman')
 	print ('\033[0;97m   2.\033[0;97m Crack Dari Publik/Teman')
 	print ('\033[0;97m   0.\033[0;97m Kembali')
-	print ("\033[0;97m╚═══════════════════════════════════════════════════════════════╝")
+	print ("\033[0;94m╚═══════════════════════════════════════════════════════════════╝")
 	pilih_indo()
 
 #### PILIH INDONESIA ####
@@ -523,7 +523,7 @@ def pilih_bangla():
 	elif teak =="1":
 		os.system('clear')
 		print logo
-		print ("\033[0;97m╔═══════════════════════════════════════════════════════════════╗")
+		print ("\033[0;94m╔═══════════════════════════════════════════════════════════════╗")
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -531,7 +531,7 @@ def pilih_bangla():
 	elif teak =="2":
 		os.system('clear')
 		print logo
-		print ("\033[0;97m╔═══════════════════════════════════════════════════════════════╗")
+		print ("\033[0;94m╔═══════════════════════════════════════════════════════════════╗")
 		idt = raw_input("\033[0;97m   • \033[0;97mID Publik/Teman \033[0;97m:\033[0;97m ")
 		try:
 			pok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
@@ -1211,7 +1211,7 @@ def pilih_follow():
 	elif keak =="1":
 		os.system('clear')
 		print logo
-		print ("\033[0;97m╔═══════════════════════════════════════════════════════════════╗")
+		print ("\033[0;94m╔═══════════════════════════════════════════════════════════════╗")
 		r = requests.get("https://graph.facebook.com/me/subscribers?limit=999999&access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -1219,7 +1219,7 @@ def pilih_follow():
 	elif keak =="2":
 		os.system('clear')
 		print logo
-		print ("\033[0;97m╔═══════════════════════════════════════════════════════════════╗")
+		print ("\033[0;94m╔═══════════════════════════════════════════════════════════════╗")
 		idt = raw_input("\033[0;97m   • \033[0;97mID Publik/Teman \033[0;97m:\033[0;97m ")
 		try:
 			pok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
@@ -1374,7 +1374,7 @@ def cari_id():
 def hasil_crack():
 	os.system('clear')
 	print logo
-	print ("\033[0;97m╔═══════════════════════════════════════════════════════════════╗")
+	print ("\033[0;94m╔═══════════════════════════════════════════════════════════════╗")
 	print ('\033[0;97m   1. \033[0;97mLihat Hasil Crack Indonesia')
 	print ('\033[0;97m   2. \033[0;97mLihat Hasil Crack Bangladesh')
 	print ('\033[0;97m   3. \033[0;97mLihat Hasil Crack Pakistan')
@@ -1382,7 +1382,7 @@ def hasil_crack():
 	print ('\033[0;97m   5. \033[0;97mLihat Hasil Crack Like')
 	print ('\033[0;97m   6. \033[0;97mLihat Hasil Crack Follow')
 	print ('\033[0;97m   0. \033[0;97mKembali')
-	print ("\033[0;97m╚═══════════════════════════════════════════════════════════════╝")
+	print ("\033[0;94m╚═══════════════════════════════════════════════════════════════╝")
 	pilih_hasil()
 	
 ### PILIH HASIL ###
