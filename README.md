@@ -1,4 +1,5 @@
 # ♛✭ 𝘾𝙍𝘼𝘾𝙆 𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆 ✭♛
+<a href="https://github.com/Dapunta/crackfb"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/Dapunta/crackfb.png" width="460px"></a>
 ## ✯⇨𝙁𝙚𝙖𝙩𝙪𝙧𝙚𝙨⇦✯
 - [✯] Crack 4 Country
 - [✯] Login Token
@@ -17,5 +18,4 @@
 - $ cd crackfb
 - $ python2 crackfb.py
 ## ✯⇨𝙎𝙘𝙧𝙚𝙚𝙣𝙨𝙝𝙤𝙩⇦✯
-![Screenshot_20210219_223707](https://user-images.githubusercontent.com/76211798/108530193-eb06f880-7307-11eb-8666-89f3e56ddd93.jpg)
-![Screenshot_20210219_223658](https://user-images.githubusercontent.com/76211798/108530213-ef331600-7307-11eb-8d01-cd8211d56405.jpg)
+![crackfb1](https://user-images.githubusercontent.com/76211798/110228461-fe36dc80-7f33-11eb-89f1-7f384d00ea39.jpg)
